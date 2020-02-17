@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: lightgray;
 }
 
 h1 {
@@ -7,7 +7,7 @@ h1 {
     text-align: center;
 }
 
-p {
+p {  
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
