@@ -5,6 +5,9 @@ body {
 h1 {
     color: black;
     text-align: center;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: thick;
 }
 
 p {  
