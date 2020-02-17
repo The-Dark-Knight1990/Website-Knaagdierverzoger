@@ -1,6 +1,14 @@
+<!DOCTYPE html>
 <html>
 <body>
+<link rel="stylesheet" href="Informatie.css">
+     <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="informatie.html">Informatie</a></li>
 
+</ul>  
+    
+    
 <H1>Het product</H1>
 <p>De verzorging van uw knaagdier is in goede handen met ons product.</p>
 
@@ -9,11 +17,11 @@
  
 
 <H3>Hoe werkt het product?</H3>
-<p>Doormiddel van een knop wordt er voedsel bijgevuld. Uw knaagdier gaat op een knopje staan en er wordt voedsel bijgevuld. Dit kan maximaal vijf keer per dag en wordt geregeld door Arduino die gekoppeld is aan de dispenser. Op het moment dat uw knaagdier op de knop drukt, gaat er één seconde een klep open die voedsel in de bak dispensed. Elke dag kan er vijf keer op de knop gedrukt worden.</p>
+<p>Doormiddel van een knop wordt er voedsel bijgevuld. Uw knaagdier gaat op een knopje staan en er wordt voedsel bijgevuld. Dit gaat via een Arduino code die gekoppeld is aan de dispenser. Om te voorkomen dat uw hamster te veel voedsel krijgt, zit er een dagelijkse limiet aan. Wanneer de knop ingedrukt wordt en dus voedsel gedispensed wordt, gaat er een timer in. Pas na 24 uur kan er weer voedsel gedispensed worden.</p>
 <p>Uw knaagdier kan wel ongelimiteerd drinken. Stel dat u een drinkfles van 500 ml heeft. Dan kan u de code dusdanig instellen dat de fles automatisch wordt gevuld wanneer het waterpeil onder de 100 ml komt.</p>
 <p>Hoe werkt dat precies?</p>
 <p>De fles van 500 ml kunt u aansluiten op een watertank van vijf, tien, vijftien liter. Dit hangt natuurlijk af van de duur van uw vakantie en de grootte van uw knaagdier.</p>
-<p>Aan de drinkfles zitten twee weerstanden gemonteerd. Eén weerstand zit bevestigd ter hoogte van 450 ml en de andere ter hoogte van 100 ml. Water geleidt stroom en lucht niet. Wanneer het waterpeil dus onder een weerstand komt, zal deze geen stroom meer geleiden. Bij de weerstand ter hoogte van 100 ml houdt dat het volgende in: wanneer het waterpeil eronder komt, zal de weerstand geen stroom meer geleiden. Op dat moment vult de fles zich met water totdat deze 450 ml bereikt. Daar zit natuurlijk de tweede weerstand. Op het moment dat het water die hoogte bereikt, wordt er weer stroom geleidt en stopt het water zich met vullen. Kortom: geleiden twee weerstanden stroom, dan stopt het water met vullen. Geleidt slechts één weerstand stroom, dan gebeurd er niks en wanneer geen weerstand stroom geleidt, dan vult de fles zich met water.</p>
+<p>Aan de drinkfles zit een magneet gemonteerd. Wanneer het waterpeil hoog genoeg is, komt het water in contact met de magneet en zal dus stroom geleiden. Wanneer het waterpeil dus onder de magneet komt, zal er geen stroom meer lopen en zo weet de Arduino dat er water bijgevuld moet worden tot 500 ml. U hoeft zich geen zorgen te maken dat er te veel water in de fles komt, want u kan namelijk instellen tot hoeveel ml de fles zich moet vullen.</p> 
 
 </html>
 </body>
