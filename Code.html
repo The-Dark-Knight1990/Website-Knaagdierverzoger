@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<H1>Code</H1>
+
+<H2>Hieronder staat de code van ons product, zodat u deze zelf kan overnemen en instellen naar voorkeur.</H2>
+
+<p>int drukknop = 9;
+int schuifVoorVoer = 11;
+
+int weerstand = 3;
+int weerstand2 = 4;
+int schuifVoorWater = 12;
+
+int buttonState = 0;
+int hoeveelheidEten = 0;
+
+unsigned long nieuwe24uurMillis = 0;
+int dagWaarde = true;
+
+int waterhoogte = 0;
+int waterBijvullen = 0;
+
+void setup() {
+
+  Serial.begin(9600);
+  pinMode(schuifVoorVoer, OUTPUT);
+  pinMode(drukknop, INPUT_PULLUP);
+  
+  pinMode(schuifVoorWater, OUTPUT);
+  pinMode(weerstand, INPUT_PULLUP);
+  pinMode(weerstand2, INPUT_PULLUP);
+
+}
+
+void loop() {
+  
+  int buttonState = digitalRead(drukknop);
+  int waterhoogte = digitalRead(weerstand);
+  int waterhoogte2 = digitalRead(weerstand2);
+    
+  if (hoeveelheidEten == 0 && dagWaarde == true) {
+    
+    nieuwe24uurMillis = millis() + 86400000;
+    Serial.println("nieuwe dag");
+    Serial.println(nieuwe24uurMillis);
+    dagWaarde = false;
+    
+  }
+  
+  if (buttonState == LOW && hoeveelheidEten < 5){
+     
+    digitalWrite(schuifVoorVoer, HIGH);
+    delay(1000);
+    Serial.println("knop ingedrukt");
+    digitalWrite(schuifVoorVoer, LOW);
+    hoeveelheidEten = hoeveelheidEten + 1;
+    
+  }
+
+  if (waterhoogte == LOW){         
+  
+    digitalWrite(schuifVoorWater, HIGH);  
+    Serial.println("water bijvullen!");
+  
+  } 
+
+  if (waterhoogte2 == HIGH){
+
+    digitalWrite(schuifVoorWater, LOW);
+    Serial.println("water bijgevuld");
+  
+  }
+ 
+  if (millis() > nieuwe24uurMillis){
+    
+    hoeveelheidEten = 0;
+    dagWaarde = true;
+  
+  }
+}
+</p>
