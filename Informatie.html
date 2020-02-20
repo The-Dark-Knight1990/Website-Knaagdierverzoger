@@ -25,6 +25,69 @@
 <p>De fles van 500 ml kunt u aansluiten op een watertank van vijf, tien, vijftien liter. Dit hangt natuurlijk af van de duur van uw vakantie en de grootte van uw knaagdier.</p>
 <p>Aan de drinkfles zit een magneet gemonteerd. Wanneer het waterpeil hoog genoeg is, komt het water in contact met de magneet en zal dus stroom geleiden. Wanneer het waterpeil dus onder de magneet komt, zal er geen stroom meer lopen en zo weet de Arduino dat er water bijgevuld moet worden tot 500 ml. U hoeft zich geen zorgen te maken dat er te veel water in de fles komt, want u kan namelijk instellen tot hoeveel ml de fles zich moet vullen.</p> 
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680102577131880448/PHOTO-2020-02-20-10-56-26.jpg" width="600" height="400">>
+  <div class="text">Uitklapbare deur</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680102577945575440/PHOTO-2020-02-20-10-56-27.jpg" width="600" height="400">>
+  <div class="text">Open dak zijkant</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680102578050302052/PHOTO-2020-02-20-10-56-26.jpg" width="600" height="400">>
+  <div class="text">Open dak voorkant</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680102577836523595/PHOTO-2020-02-20-10-56-24.jpg" width="600" height="400">>
+  <div class="text">Zijkant</div>
+</div>
+ <div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680102577836523595/PHOTO-2020-02-20-10-56-24.jpg" width="600" height="400">>
+  <div class="text">Voorkant</div>
+</div>
+    
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
 </body>
 </html>
-
