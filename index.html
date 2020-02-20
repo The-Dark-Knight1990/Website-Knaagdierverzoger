@@ -9,8 +9,62 @@
 
 </ul>  
 
-<H1>Knaagdierverzorger</H1>
+<H1>Hamster Manuel Feeding System</H1>
          
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680115059653083318/9k.png" width="600" height="400">>
+  <div class="text">Leven</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680114900806139904/2Q.png" width="600" height="400">>
+  <div class="text">Drinken</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://cdn.discordapp.com/attachments/397737416485502986/680114751186927647/Z.png" width="600" height="400">>
+  <div class="text">Genieten</div>
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+    
+    
 <p>Deze website is speciaal ontwikkeld voor onze knaagdierverzorger.</p>
 <p>U gaat vast wel eens op vakantie, maar jammer genoeg kan uw hamster niet mee. Het is dan zo jammer wanneer u mensen heeft gevraagd op uw hamster te passen en hij is dood bij terugkomst. Daarvoor hebben wij iets bedacht, een knaagdierverzorger.</p>
 
